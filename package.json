@@ -1,0 +1,12 @@
+{
+  "name": "qrono-tests",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "cypress": "npx cypress run",
+    "cypress:open": "npx cypress open"
+  },
+  "dependencies": {
+    "cypress": "^9.5.1"
+  }
+}
