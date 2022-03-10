@@ -14,8 +14,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: npm run build
-          start: npm start
           browser: chrome
           spec: cypress/integration/create_booking_prod.js
           record: true
@@ -35,4 +33,4 @@ jobs:
           mention_users: 'U01SPPUBB41,U01SPPNLRS5'
           mention_users_when: 'failure'
         env:
-          SLACK_WEBHOOK_URL: 'https://hooks.slack.com/services/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'
+          SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
