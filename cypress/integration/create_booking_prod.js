@@ -22,6 +22,6 @@ describe('Makes a Booking', () => {
         cy.get('.input-container').contains('Email').parent().within(() => {cy.get('input').type('cypress-test@qrono.dev')})
         cy.get('#PhoneInput').type('201-351-1428') // real phone number that Priya generated via an app
         cy.contains('Confirm').click()
-        cy.contains('Confirmed')
+        cy.contains('Pending')
     })
   })
