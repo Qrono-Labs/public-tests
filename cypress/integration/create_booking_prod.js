@@ -2,7 +2,7 @@ describe('Makes a Booking', () => {
     it('Opens book.qrono.dev, puts in dates and user info, and gets to the Confirmed page', () => {
         cy.intercept({
             method: 'GET',
-            path: '/api/items/?account__handle=qronouptime',
+            path: '/api/items/?is_active=true&account__handle=qronouptime',
         }).as('getItems');
         cy.visit('book.qrono.dev/qronouptime')
         cy.wait('@getItems')
